@@ -1,0 +1,381 @@
+﻿<UserControl x:Class="TPS9266xEvaluationModule.TPS92520Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TPS9266xEvaluationModule"
+             mc:Ignorable="d" Height="227.866" Width="509" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <Grid x:Name="grid520Control" Margin="0" GotFocus="Grid520Control_GotFocus">
+        <GroupBox x:Name="groupBoxChannel1" Header="Channel 1" HorizontalAlignment="Left" Width="245" Margin="10,0,0,20">
+            <Grid x:Name="gridChannel1" Margin="0">
+                <CheckBox x:Name="checkBoxEnableChannel1" Content="Enable" Margin="85,14,86,0" VerticalAlignment="Top" Checked="checkBoxEnableChannel1_Checked" Unchecked="checkBoxEnableChannel1_Checked" ToolTip="Register 0x00 Bit 0"/>
+                <CheckBox x:Name="checkBoxPwmChannel1" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Checked="checkBoxPwmChannel1_Checked" Unchecked="checkBoxPwmChannel1_Checked" ToolTip="Register 0x00 Bit 1" Visibility="Collapsed">
+                    <TextBlock Text="PWM Source 
+                                       Internal" TextWrapping="Wrap"/>
+                </CheckBox>
+                <CheckBox x:Name="checkBoxLowFetChannel1" Content="Low iLimit Resp" HorizontalAlignment="Left" Margin="112,6,0,0" VerticalAlignment="Top" Checked="checkBoxLowFetChannel1_Checked" Unchecked="checkBoxLowFetChannel1_Checked" ToolTip="Register 0x01 Bit 0" Visibility="Collapsed"/>
+                <CheckBox x:Name="checkBoxHighFetChannel1" Content="High iLimit Resp" HorizontalAlignment="Left" Margin="112,26,0,0" VerticalAlignment="Top" Checked="checkBoxHighFetChannel1_Checked" Unchecked="checkBoxHighFetChannel1_Checked" ToolTip="Register 0x01 Bit 1" Visibility="Collapsed"/>
+                <CheckBox x:Name="checkBoxThermalResponseChannel1" Content="Therm Response" HorizontalAlignment="Left" Margin="112,46,0,0" VerticalAlignment="Top" Checked="checkBoxThermalResponseChannel1_Checked" Unchecked="checkBoxThermalResponseChannel1_Checked" ToolTip="Register 0x01 Bit 2" Visibility="Collapsed"/>
+                <Label Content=":" HorizontalAlignment="Left" Margin="22,358,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.207,0.269" Width="8"/>
+                <TextBlock x:Name="textBlockLastOffAdcChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="158,414,0,0" Text="Tex" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelAdcLastOff1" Content="ADC" HorizontalAlignment="Left" Margin="189,410,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockLastOffVoltsChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="158,435,0,0" Text="Tex" RenderTransformOrigin="0.061,0.312" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelAdcLastOff2" Content="Volts" HorizontalAlignment="Left" Margin="190,430,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelLastOffChannel1" Content="Last Off" HorizontalAlignment="Left" Margin="102,410,0,0" VerticalAlignment="Top" ToolTip="Register 0x16 Bit 7-0" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockBstuvChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="60,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelBSTUV1" Content="BSTUV" HorizontalAlignment="Left" Margin="58,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockOffminChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="80,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelOFFMIN1" Content="OFFMIN" HorizontalAlignment="Left" Margin="79,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="labelLSILIM1" Content="LSILIM" HorizontalAlignment="Left" Margin="98,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="labelHSILIM1" Content="HSILIM" HorizontalAlignment="Left" Margin="116,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockLslimChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="100,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockHslimChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="120,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockShortChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="140,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelSHORT1" Content="SHORT" HorizontalAlignment="Left" Margin="136,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockCompovChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="160,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelCOMPOV1" Content="COMPOV" HorizontalAlignment="Left" Margin="159,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockStatusChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="20,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelSTATUS1" Content="STATUS" HorizontalAlignment="Left" Margin="18,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockTpChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="40,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelTP1" Content="TP" HorizontalAlignment="Left" Margin="36,503,0,-6" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="labelChan1Slope" Content="Analog Current" HorizontalAlignment="Left" Margin="62,44,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockAnalogCurrentChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,50,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderAnalogCurrentChannel1" SmallChange="1" Margin="10,71,10,0" VerticalAlignment="Top" SelectionEnd="1023" Maximum="150" ValueChanged="sliderAnalogCurrentChannel1_ValueChanged" ToolTip="Register 0x08 Bit 1-0; Register 0x09 Bit 7-0"/>
+                <Label x:Name="labelChan1Slope_Copy" Content="On Time" HorizontalAlignment="Left" Margin="93,107,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockOnTimeChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,112,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderOnTimeChannel1" SmallChange="1" Margin="10,132,10,0" VerticalAlignment="Top" SelectionEnd="1023" Maximum="12" ValueChanged="sliderOnTimeChannel1_ValueChanged" ToolTip="Register 0x11 Bit 5-0" Minimum="6"/>
+                <Label x:Name="labelChan1Slope_Copy1" Content="PWM" HorizontalAlignment="Left" Margin="109,207,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockPwmChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,212,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75" Visibility="Collapsed"/>
+                <Slider x:Name="sliderPwmChannel1" SmallChange="1" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="206" SelectionEnd="1023" Maximum="1023" ValueChanged="sliderPwmChannel1_ValueChanged" ToolTip="Register 0x0D Bit 7-0; Register 0x0E Bit 1-0" Visibility="Collapsed"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxBothChannels" Header="Device" Margin="198,0,0,0" HorizontalAlignment="Left" Width="174" Visibility="Collapsed" Grid.Column="1">
+            <Grid Margin="0">
+                <GroupBox x:Name="groupBoxFaultsDevice" Header="Faults" HorizontalAlignment="Left" Height="147" Margin="0,384,0,0" VerticalAlignment="Top" Width="160">
+                    <Grid x:Name="gridFaultsDevice" Margin="0" Height="141" VerticalAlignment="Bottom">
+                        <Button x:Name="buttonResetFaults" Content="Reset Flt Pin" Margin="37,54,38,0" VerticalAlignment="Top" Click="buttonResetFaults_Click" ToolTip="Register 0x00 Bit 7"/>
+                        <ComboBox x:Name="comboBoxFaultTimer" HorizontalAlignment="Left" Margin="12,24,0,0" VerticalAlignment="Top" Width="43" SelectionChanged="comboBoxFaultTimer_SelectionChanged" RenderTransformOrigin="-0.184,-0.682" ToolTip="Register 0x01 Bit 7-6"/>
+                        <Label x:Name="labelFaultTimer" Content="Fault Timer(ms)" HorizontalAlignment="Left" Margin="55,22,0,0" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlockTwDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="65,122,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top"/>
+                        <Label Content="TW" HorizontalAlignment="Left" Margin="63,111,0,-6" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                        <TextBlock x:Name="textBlockPcDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="85,122,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top"/>
+                        <Label Content="PC" HorizontalAlignment="Left" Margin="84,112,0,-3" RenderTransformOrigin="-0.207,0.269">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                        <TextBlock x:Name="textBlockV5auvDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="45,122,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top"/>
+                        <Label Content="V5AUV" HorizontalAlignment="Left" Margin="42,114,0,-5" RenderTransformOrigin="-0.207,0.269">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                        <TextBlock x:Name="textBlockPcDeviceFltPin" HorizontalAlignment="Left" TextAlignment="Center" Margin="105,122,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top"/>
+                        <Label Content="PC" HorizontalAlignment="Left" Margin="84,112,0,-3" RenderTransformOrigin="-0.207,0.269">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                        <Label x:Name="labelFpin" Content="F Pin" HorizontalAlignment="Left" Margin="104,112,0,-3" RenderTransformOrigin="-0.207,0.269" Visibility="Visible">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                        <TextBlock x:Name="textBlockStandAloneDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="25,122,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top"/>
+                        <Label Content="Stdalone" HorizontalAlignment="Left" Margin="22,114,0,-5" RenderTransformOrigin="-0.207,0.269">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-45"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                    </Grid>
+                </GroupBox>
+                <GroupBox x:Name="groupBoxWatchDog" Header="Watchdog" HorizontalAlignment="Left" Height="78" Margin="1,92,0,0" VerticalAlignment="Top" Width="161">
+                    <Grid x:Name="gridWatchDog" Margin="0">
+                        <ComboBox x:Name="comboBoxWatchDogTimer" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="64" SelectionChanged="comboBoxWatchDogTimer_SelectionChanged" ToolTip="Register 0x02 Bit 3-0"/>
+                        <Label x:Name="labelWatchDogTimer" Content="Timer(ms)" HorizontalAlignment="Left" Margin="79,5,0,0" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlockWatchdogViolations" HorizontalAlignment="Left" Margin="10,33,0,0" TextAlignment="Center" Text="T" VerticalAlignment="Top" Width="17"/>
+                        <Label x:Name="labelViolationsDevice" Content="Violations" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox x:Name="groupBoxThermalDevice" Header="Thermal" HorizontalAlignment="Left" Height="92" Margin="1,0,0,0" VerticalAlignment="Top" Width="161">
+                    <Grid Margin="0,0,0,-12">
+                        <TextBox x:Name="textBoxTwLimitDevice" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" Text="TextBox" VerticalAlignment="Top" Width="40" TextAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" KeyDown="textBoxTwLimitDevice_KeyDown" LostFocus="textBoxTwLimitDevice_LostFocus" ToolTip="Register 0x06 Bit 7-0"/>
+                        <Label Content="TW Limit" HorizontalAlignment="Left" Margin="51,24,0,0" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlockTempCDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="6,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="40" Text="Tex"/>
+                        <Label Content="TW Celcius" HorizontalAlignment="Left" Margin="51,49,0,1"/>
+                        <TextBlock x:Name="textBlockCurrentTempCDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="40" Text="Tex" ToolTip="Register 0x1B Bit 1-0; Register 0x1C Bit 9-2"/>
+                        <Label Content="Current Temp (C)" HorizontalAlignment="Left" Margin="49,-1,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </GroupBox>
+                <TextBlock x:Name="textBlockV5dAdcDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="64,179,0,0" Text="Tex" VerticalAlignment="Top" Width="27"/>
+                <Label Content="ADC" HorizontalAlignment="Left" Margin="95,175,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockV5dVoltsDevice" HorizontalAlignment="Left" TextAlignment="Center" Margin="64,200,0,0" Text="Tex" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="27"/>
+                <Label Content="Volts" HorizontalAlignment="Left" Margin="96,195,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelLastOff1_Copy1" Content="V5D" HorizontalAlignment="Left" Margin="27,174,0,0" VerticalAlignment="Top" ToolTip="Register 0x1D Bit 7-0"/>
+                <Button x:Name="buttonSleepDevice" Content="Sleep On" Margin="10,258,0,0" VerticalAlignment="Top" Click="buttonSleepDevice_Click" HorizontalAlignment="Left" Width="67" ToolTip="Register 0x07 Bit 1-0" MouseEnter="buttonSleepDevice_MouseEnter"/>
+                <Button x:Name="buttonResetDevice" Content="Reset All" Margin="10,283,0,0" VerticalAlignment="Top" Click="buttonResetDevice_Click" Background="Red" RenderTransformOrigin="0.746,0.8" HorizontalAlignment="Left" Width="67" ToolTip="Register 0x2C Bit 7-0"/>
+                <ComboBox x:Name="comboBoxPwmDividerDevice" Margin="10,227,0,0" VerticalAlignment="Top" SelectionChanged="comboBoxPwmDividerDevice_SelectionChanged" HorizontalAlignment="Left" Width="57" ToolTip="Register 0x0C Bit 2-0"/>
+                <Label x:Name="labelLastOff1_Copy2" Content="PWM Div (Hz)" HorizontalAlignment="Left" Margin="72,225,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="buttonUpdateAllDevice" Content="Update On" Margin="82,258,0,0" VerticalAlignment="Top" Click="buttonUpdateAllDevice_Click" HorizontalAlignment="Left" Width="70" MouseEnter="buttonUpdateAllDevice_MouseEnter"/>
+                <Button x:Name="buttonLimpHome" Content="Limp Home" Margin="82,335,0,0" VerticalAlignment="Top" Click="buttonLimpHome_Click" HorizontalAlignment="Left" Width="70" ToolTip="Limp Home Mode Dialog Enable"/>
+                <Button x:Name="buttonReadAll" Content="Read All" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top" Width="66" Click="buttonReadAll_Click"/>
+                <TextBlock x:Name="textBlockReg0x00" HorizontalAlignment="Left" TextAlignment="Center" Margin="103,366,0,0" Text="Tex" VerticalAlignment="Top" Width="27"/>
+                <Label x:Name="labelReg0x00" Content="Reg 0x00 =" HorizontalAlignment="Left" Margin="35,361,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="buttonRegDump" Content="Reg Dump" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top" Width="66" Click="ButtonRegDump_Click"/>
+                <CheckBox x:Name="checkBoxPwmPhase" Content="PWMPH" HorizontalAlignment="Left" Margin="82,286,0,0" VerticalAlignment="Top" Checked="checkBoxPwmPhase_Checked" Unchecked="checkBoxPwmPhase_Checked" ToolTip="Register 0x00 Bit 6"/>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="labelVinChannel1" Content="VIN" HorizontalAlignment="Left" Margin="4,384,0,-174" VerticalAlignment="Top" ToolTip="Register 0x13 Bit 7-0" Visibility="Collapsed"/>
+        <Label x:Name="labelAdcVin1" Content="ADC" HorizontalAlignment="Left" Margin="26,383,0,-173" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockVinVoltsChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="39,409,0,-215" RenderTransformOrigin="0.061,0.312" Width="27" Text="Tex" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelVoltsVin1" Content="Volts" HorizontalAlignment="Left" Margin="26,404,0,-194" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLedAdcChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="39,430,0,-236" Text="Tex" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelAdcLed1" Content="ADC" HorizontalAlignment="Left" Margin="26,427,0,-217" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLedVoltsChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="39,451,0,-257" Text="Tex" RenderTransformOrigin="0.061,0.312" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelVoltsLed1" Content="Volts" HorizontalAlignment="Left" Margin="26,447,0,-237" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLastOnAdcChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="119,388,0,-194" Text="Tex" Width="27" RenderTransformOrigin="6.037,-0.938" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelAdcLast1" Content="ADC" HorizontalAlignment="Left" Margin="150,383,0,-173" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLastOnVoltsChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="119,409,0,-215" Text="Tex" RenderTransformOrigin="0.061,0.312" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelVoltsLast1" Content="Volts" HorizontalAlignment="Left" Margin="151,403,0,-193" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelLedChannel1" Content="LED" HorizontalAlignment="Left" Margin="4,426,0,-216" VerticalAlignment="Top" ToolTip="Register 0x14 Bit 7-0" Visibility="Collapsed"/>
+        <Label x:Name="labelLastOff1" Content="Last On" HorizontalAlignment="Left" Margin="63,383,0,-173" VerticalAlignment="Top" ToolTip="Register 0x15 Bit 7-0" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockVinAdcChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="39,388,0,-194" RenderTransformOrigin="0.061,0.312" Width="27" Text="Tex" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.ColumnSpan="2"/>
+        <GroupBox x:Name="groupBoxChannel2" Header="Channel 2" Margin="260,0,10,20">
+            <Grid x:Name="gridChannel2" Margin="0">
+                <CheckBox x:Name="checkBoxEnableChannel2" Content="Enable" Margin="85,14,86,0" VerticalAlignment="Top" Checked="checkBoxEnableChannel2_Checked" Unchecked="checkBoxEnableChannel2_Checked" ToolTip="Register 0x00 Bit 2"/>
+                <CheckBox x:Name="checkBoxPwmChannel2" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Checked="checkBoxPwmChannel2_Checked" Unchecked="checkBoxPwmChannel2_Checked" ToolTip="Register 0x00 Bit 3" Visibility="Collapsed">
+                    <TextBlock Text="PWM Source 
+                                       Internal" TextWrapping="Wrap"/>
+                </CheckBox>
+                <CheckBox x:Name="checkBoxLowFetChannel2" Content="Low iLimit Resp
+                                  " HorizontalAlignment="Left" Margin="112,6,0,0" VerticalAlignment="Top" Checked="checkBoxLowFetChannel2_Checked" Unchecked="checkBoxLowFetChannel2_Checked" ToolTip="Register 0x01 Bit 3" Visibility="Collapsed"/>
+                <CheckBox x:Name="checkBoxHighFetChannel2" Content="High iLimit Resp" HorizontalAlignment="Left" Margin="112,26,0,0" VerticalAlignment="Top" Checked="checkBoxHighFetChannel2_Checked" Unchecked="checkBoxHighFetChannel2_Checked" ToolTip="Register 0x01 Bit 4" Visibility="Collapsed"/>
+                <CheckBox x:Name="checkBoxThermalResponseChannel2" Content="Therm Response" HorizontalAlignment="Left" Margin="112,46,0,0" VerticalAlignment="Top" Checked="checkBoxThermalResponseChannel2_Checked" Unchecked="checkBoxThermalResponseChannel2_Checked" ToolTip="Register 0x01 Bit 5" Visibility="Collapsed"/>
+                <Label Content=":" HorizontalAlignment="Left" Margin="22,358,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.207,0.269" Width="8"/>
+                <TextBlock x:Name="textBlockLastOffAdcChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="158,414,0,0" Text="Tex" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelAdcLastOff3" Content="ADC" HorizontalAlignment="Left" Margin="189,410,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockLastOffVoltsChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="158,435,0,0" Text="Tex" RenderTransformOrigin="0.061,0.312" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelVoltsLastOff2" Content="Volts" HorizontalAlignment="Left" Margin="190,430,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelLastOffChannel2" Content="Last Off" HorizontalAlignment="Left" Margin="102,410,0,0" VerticalAlignment="Top" ToolTip="Register 0x1A Bit 7-0" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockBstuvChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="60,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelBSTUV2" Content="BSTUV" HorizontalAlignment="Left" Margin="58,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockOffminChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="80,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelOFFMIN2" Content="OFFMIN" HorizontalAlignment="Left" Margin="79,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="labelLSILIM2" Content="LSILIM" HorizontalAlignment="Left" Margin="98,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="labelHSILIM2" Content="HSILIM" HorizontalAlignment="Left" Margin="116,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockLslimChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="100,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockHslimChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="120,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockShortChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="140,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelSHORT2" Content="SHORT" HorizontalAlignment="Left" Margin="136,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockCompovChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="160,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelCOMPOV2" Content="COMPOV" HorizontalAlignment="Left" Margin="159,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockStatusChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="20,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelSTATUS2" Content="STATUS" HorizontalAlignment="Left" Margin="18,505,0,-8" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBlock x:Name="textBlockTpChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="40,516,0,0" Text="TextBlock" Width="15" RenderTransformOrigin="-0.533,-0.133" Height="15" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Label x:Name="labelTP2" Content="TP" HorizontalAlignment="Left" Margin="36,503,0,-6" RenderTransformOrigin="-0.207,0.269" Height="36" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="labelChan1Slope1" Content="Analog Current" HorizontalAlignment="Left" Margin="62,44,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockAnalogCurrentChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,50,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderAnalogCurrentChannel2" SmallChange="1" Margin="10,71,10,0" VerticalAlignment="Top" SelectionEnd="1023" Maximum="150" ValueChanged="sliderAnalogCurrentChannel2_ValueChanged" ToolTip="Register 0x0A Bit 1-0; Register 0x0B Bit 7-0"/>
+                <Label x:Name="labelChan1Slope_Copy2" Content="On Time" HorizontalAlignment="Left" Margin="93,107,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockOnTimeChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,112,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderOnTimeChannel2" SmallChange="1" Margin="10,132,10,0" VerticalAlignment="Top" SelectionEnd="1023" Maximum="12" ValueChanged="sliderOnTimeChannel2_ValueChanged" ToolTip="Register 0x12 Bit 5-0" Minimum="6"/>
+                <Label x:Name="labelChan1Slope_Copy3" Content="PWM" HorizontalAlignment="Left" Margin="109,207,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="textBlockPwmChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,212,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75" Visibility="Collapsed"/>
+                <Slider x:Name="sliderPwmChannel2" SmallChange="1" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="206" SelectionEnd="1023" Maximum="1023" ValueChanged="sliderPwmChannel2_ValueChanged" ToolTip="Register 0x0F Bit 7-0; Register 0x10 Bit 1-0" Visibility="Collapsed"/>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="labelVinChannel2" Content="VIN" HorizontalAlignment="Left" Margin="382,387,0,-177" VerticalAlignment="Top" ToolTip="Register 0x17 Bit 7-0" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelAdcVin2" Content="ADC" HorizontalAlignment="Left" Margin="449,386,0,-176" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelVoltsVin2" Content="Volts" HorizontalAlignment="Left" Margin="449,407,0,-197" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLedAdcChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="417,433,0,-239" Text="Tex" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelAdcLed2" Content="ADC" HorizontalAlignment="Left" Margin="449,430,0,-220" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelVoltsLed2" Content="Volts" HorizontalAlignment="Left" Margin="449,450,0,-240" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="laelAdcLast2" Content="ADC" HorizontalAlignment="Left" Margin="573,386,-124,-176" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelVoltsLast2" Content="Volts" HorizontalAlignment="Left" Margin="574,406,-125,-196" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelLedChannel2" Content="LED" HorizontalAlignment="Left" Margin="382,429,0,-219" VerticalAlignment="Top" ToolTip="Register 0x18 Bit 7-0" Visibility="Collapsed" Grid.Column="1"/>
+        <Label x:Name="labelLastOff1_Copy5" Content="Last On" HorizontalAlignment="Left" Margin="486,386,-37,-176" VerticalAlignment="Top" ToolTip="Register 0x19 Bit 7-0" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockVinVoltsChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="417,412,0,-218" RenderTransformOrigin="0.061,0.312" Width="27" Text="Tex" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLedVoltsChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="417,454,0,-260" Text="Tex" RenderTransformOrigin="0.061,0.312" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLastOnAdcChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="541,391,-119,-197" Text="Tex" Width="27" RenderTransformOrigin="6.037,-0.938" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockLastOnVoltsChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="541,412,-119,-218" Text="Tex" RenderTransformOrigin="0.061,0.312" Width="27" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockVinAdcChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="417,391,0,-197" RenderTransformOrigin="0.061,0.312" Width="27" Text="Tex" Height="16" VerticalAlignment="Top" Visibility="Collapsed" Grid.Column="1"/>
+    </Grid>
+</UserControl>

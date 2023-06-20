@@ -1,0 +1,61 @@
+﻿<Window x:Name="windowLimpHomeMode" x:Class="TPS9266xEvaluationModule.LimpHomeMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPS9266xEvaluationModule"
+        mc:Ignorable="d"
+        Title="Limp Home Mode" Height="334.493" Width="674.998" ResizeMode="CanMinimize" Closing="Window_Closing" Icon="dm7361_icon_2.ico">
+    <Grid Margin="0">
+        <GroupBox x:Name="groupBoxAnaloCurentChannel1" Header="Channel 1" HorizontalAlignment="Left" Margin="10,10,0,10" Width="231">
+            <Grid Margin="0">
+                <Label x:Name="labelChan1Slope" Content="Analog Current" HorizontalAlignment="Left" Margin="62,79,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockAnalogCurrentChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,84,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderAnalogCurrentChannel1" SmallChange="1" HorizontalAlignment="Left" Margin="10,105,0,0" Width="206" SelectionEnd="1023" Maximum="1023" ValueChanged="sliderAnalogCurrentChannel1_ValueChanged" Height="18" VerticalAlignment="Top" ToolTip="Register 0x24 Bit 1-0; Register 0x25 Bit 7-0"/>
+                <Label x:Name="labelChan1Slope_Copy" Content="On Time" HorizontalAlignment="Left" Margin="93,143,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockOnTimeChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,148,0,0" Text="TextBlock" RenderTransformOrigin="1.469,-0.75" Height="16" VerticalAlignment="Top"/>
+                <Slider x:Name="sliderOnTimeChannel1" SmallChange="1" HorizontalAlignment="Left" Margin="10,168,0,0" Width="206" SelectionEnd="1023" Maximum="62" ValueChanged="sliderOnTimeChannel1_ValueChanged" Height="18" VerticalAlignment="Top" ToolTip="Register 0x2C Bit 5-0"/>
+                <Label x:Name="labelPwmChannel1" Content="PWM" HorizontalAlignment="Left" Margin="109,205,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockPwmChannel1" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,210,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderPwmChannel1" SmallChange="1" HorizontalAlignment="Left" Margin="10,231,0,0" Width="206" SelectionEnd="1023" Maximum="1023" ValueChanged="sliderPwmChannel1_ValueChanged" Height="18" VerticalAlignment="Top" ToolTip="Register 0x28 Bit 7-0; Register 0x29 Bit 1-0"/>
+                <CheckBox x:Name="checkBoxEnableChannel1" Content="Enable" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Checked="checkBoxEnableChannel1_Checked" Unchecked="checkBoxEnableChannel1_Checked" ToolTip="Register 0x1E Bit 0"/>
+                <CheckBox x:Name="checkBoxPwmChannel1" Content="PWM Source" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Checked="checkBoxPwmChannel1_Checked" Unchecked="checkBoxPwmChannel1_Checked" ToolTip="Register 0x1E Bit 1"/>
+                <CheckBox x:Name="checkBoxPwm100Channel1" Content="PWM 100%" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Checked="checkBoxPwm100Channel1_Checked" Unchecked="checkBoxPwm100Channel1_Checked" ToolTip="Register 0x1E Bit 2"/>
+                <CheckBox x:Name="checkBoxLowFetChannel1" Content="Low iLimit Resp" HorizontalAlignment="Left" Margin="112,6,0,0" VerticalAlignment="Top" Checked="checkBoxLowFetChannel1_Checked" Unchecked="checkBoxLowFetChannel1_Checked" ToolTip="Register 0x1F Bit 0"/>
+                <CheckBox x:Name="checkBoxHighFetChannel1" Content="High iLimit Resp" HorizontalAlignment="Left" Margin="112,26,0,0" VerticalAlignment="Top" Checked="checkBoxHighFetChannel1_Checked" Unchecked="checkBoxHighFetChannel1_Checked" ToolTip="Register 0x1F Bit 1"/>
+                <CheckBox x:Name="checkBoxThermalResponseChannel1" Content="Therm Response" HorizontalAlignment="Left" Margin="112,46,-1,0" VerticalAlignment="Top" Checked="checkBoxThermalResponseChannel1_Checked" Unchecked="checkBoxThermalResponseChannel1_Checked" ToolTip="Register 0x1F Bit 2"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxDevice" Header="Device" HorizontalAlignment="Left" Margin="246,10,0,10" Width="166">
+            <Grid Margin="0">
+                <ComboBox x:Name="comboBoxFaultTimer" HorizontalAlignment="Left" Margin="12,11,0,0" VerticalAlignment="Top" Width="43" SelectionChanged="comboBoxFaultTimer_SelectionChanged" RenderTransformOrigin="-0.184,-0.682" ToolTip="Register 0x1F Bit 7-6"/>
+                <Label x:Name="labelFaultTimer" Content="Fault Timer(ms)" HorizontalAlignment="Left" Margin="55,9,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="checkBoxLhiReference" Content="LHI Ref: LHix" Margin="37,68,0,0" VerticalAlignment="Top" Checked="checkBoxLhiReference_Checked" Unchecked="checkBoxLhiReference_Checked" HorizontalAlignment="Left" Width="81" ToolTip="Register 0x1E Bit 6"/>
+                <TextBlock x:Name="textBlockLhiDevice" HorizontalAlignment="Left" Margin="30,105,0,0" TextAlignment="Center" Text="TextBlock" VerticalAlignment="Top" Width="27"/>
+                <Label x:Name="labelLhiDevice" Content="Read: LHI" HorizontalAlignment="Left" Margin="62,100,0,0" VerticalAlignment="Top" ToolTip="Register 0x20 Bit 1-0; Register 0x21 Bit 9-2"/>
+                <Button x:Name="buttonLimpMode" Content="Limp Mode On" Margin="25,177,26,0" VerticalAlignment="Top" Click="buttonLimpMode_Click" ToolTip="Register 0x00 Bit 5"/>
+                <TextBlock x:Name="textBlockLhifiltDevice" HorizontalAlignment="Left" Margin="30,126,0,0" TextAlignment="Center" Text="TextBlock" VerticalAlignment="Top" Width="27"/>
+                <Label x:Name="labelLhifiltDevice" Content="LHIFILT" HorizontalAlignment="Left" Margin="62,121,0,0" VerticalAlignment="Top" ToolTip="Register 0x20 Bit 1-0; Register 0x21 Bit 9-2"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxAnaloCurentChannel2" Header="Channel 2" HorizontalAlignment="Left" Margin="417,10,0,10" Width="231">
+            <Grid Margin="0">
+                <Label x:Name="labelChan1Slope1" Content="Analog Current" HorizontalAlignment="Left" Margin="62,79,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockAnalogCurrentChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,84,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderAnalogCurrentChannel2" SmallChange="1" HorizontalAlignment="Left" Margin="10,105,0,0" Width="206" SelectionEnd="1023" Maximum="1023" ValueChanged="sliderAnalogCurrentChannel2_ValueChanged" Height="18" VerticalAlignment="Top" ToolTip="Register 0x26 Bit 1-0; Register 0x27 Bit 7-0"/>
+                <Label x:Name="labelChan1Slope_Copy2" Content="On Time" HorizontalAlignment="Left" Margin="93,143,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockOnTimeChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,148,0,0" Text="TextBlock" RenderTransformOrigin="1.469,-0.75" Height="16" VerticalAlignment="Top"/>
+                <Slider x:Name="sliderOnTimeChannel2" SmallChange="1" HorizontalAlignment="Left" Margin="10,168,0,0" Width="206" SelectionEnd="1023" Maximum="62" ValueChanged="sliderOnTimeChannel2_ValueChanged" Height="18" VerticalAlignment="Top" ToolTip="Register 0x2D Bit 5-0"/>
+                <Label x:Name="labelPwmChannel2" Content="PWM" HorizontalAlignment="Left" Margin="109,205,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockPwmChannel2" HorizontalAlignment="Left" TextAlignment="Center" Margin="153,210,0,0" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.469,-0.75"/>
+                <Slider x:Name="sliderPwmChannel2" SmallChange="1" HorizontalAlignment="Left" Margin="10,231,0,0" Width="206" SelectionEnd="1023" Maximum="1023" ValueChanged="sliderPwmChannel2_ValueChanged" Height="18" VerticalAlignment="Top" ToolTip="Register 0x2A Bit 7-0; Register 0x2B Bit 1-0"/>
+                <CheckBox x:Name="checkBoxEnableChannel2" Content="Enable" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Checked="checkBoxEnableChannel2_Checked" Unchecked="checkBoxEnableChannel2_Checked" ToolTip="Register 0x1E Bit 3"/>
+                <CheckBox x:Name="checkBoxPwmChannel2" Content="PWM Source" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Checked="checkBoxPwmChannel2_Checked" Unchecked="checkBoxPwmChannel2_Checked" ToolTip="Register 0x1E Bit 4"/>
+                <CheckBox x:Name="checkBoxPwm100Channel2" Content="PWM 100%" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Checked="checkBoxPwm100Channel2_Checked" Unchecked="checkBoxPwm100Channel2_Checked" ToolTip="Register 0x1E Bit 5"/>
+                <CheckBox x:Name="checkBoxLowFetChannel2" Content="Low iLimit Resp" HorizontalAlignment="Left" Margin="112,6,0,0" VerticalAlignment="Top" Checked="checkBoxLowFetChannel2_Checked" Unchecked="checkBoxLowFetChannel2_Checked" ToolTip="Register 0x1F Bit 3"/>
+                <CheckBox x:Name="checkBoxHighFetChannel2" Content="High iLimit Resp" HorizontalAlignment="Left" Margin="112,26,0,0" VerticalAlignment="Top" Checked="checkBoxHighFetChannel2_Checked" Unchecked="checkBoxHighFetChannel2_Checked" ToolTip="Register 0x1F Bit 4"/>
+                <CheckBox x:Name="checkBoxThermalResponseChannel2" Content="Therm Response" HorizontalAlignment="Left" Margin="112,46,-1,0" VerticalAlignment="Top" Checked="checkBoxThermalResponseChannel2_Checked" Unchecked="checkBoxThermalResponseChannel2_Checked" ToolTip="Register 0x1F Bit 5"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

@@ -1,0 +1,129 @@
+﻿<UserControl x:Name="userControl518" x:Class="TPS9266xEvaluationModule.TPS92518Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TPS9266xEvaluationModule"
+             mc:Ignorable="d" Height="513" Width="660" IsVisibleChanged="userControl518_IsVisibleChanged">
+    <Grid x:Name="gridControl518" Margin="1" Width="658" Height="513">
+        <Button x:Name="buttonRestoreSettings" Content="Restore Previously Saved Settings" Margin="225,455,224,0" Click="buttonRestoreSettings_Click" Height="20" VerticalAlignment="Top"/>
+        <GroupBox x:Name="groupBoxChan1" Header="Channel 1" HorizontalAlignment="Left" Margin="5,5,0,10" Width="193" BorderThickness="1">
+            <Grid Margin="1" Height="460" VerticalAlignment="Top">
+                <CheckBox x:Name="checkBoxBuck1Enable" Content="Buck 1 Enable" Margin="41,6,0,0" VerticalAlignment="Top" Checked="checkBoxBuck1Enable_Checked" Unchecked="checkBoxBuck1Enable_Checked" HorizontalAlignment="Left" Width="96"/>
+                <Slider x:Name="sliderBuck1PeakV" SmallChange="1" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="159" ValueChanged="sliderBuck1PeakV_ValueChanged" Maximum="255"/>
+                <TextBox x:Name="textBoxBuck1PeakV" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="92,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" RenderTransformOrigin="1.012,-4.159" KeyDown="textBoxBuck1PeakV_KeyDown" LostFocus="textBoxBuck1PeakV_LostFocus" MaxLength="3"/>
+                <Label x:Name="labelBuck1PeakA" Content="Peak Threshold" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.141"/>
+                <Label x:Name="labelPeakThresholdDAC1" Content="DAC" HorizontalAlignment="Left" Margin="143,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.529,0.026"/>
+                <Slider x:Name="sliderBuck1OffTime" SmallChange="1" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Width="159" ValueChanged="sliderBuck1OffTime_ValueChanged" Maximum="255"/>
+                <TextBox x:Name="textBoxBuck1OffTime" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="91,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.012,-4.159" KeyDown="textBoxBuck1OffTime_KeyDown" LostFocus="textBoxBuck1OffTime_LostFocus" MaxLength="3"/>
+                <Label x:Name="labelBuck1OffTime" Content="Off Time" HorizontalAlignment="Left" Margin="44,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.726,0.474"/>
+                <Label x:Name="labelBuck1OffTimeDAC1" Content="DAC" HorizontalAlignment="Left" Margin="138,143,0,0" VerticalAlignment="Top"/>
+                <Slider x:Name="sliderBuck1MaxOff" SmallChange="1" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="159" ValueChanged="sliderBuck1MaxOff_ValueChanged" Maximum="255"/>
+                <TextBox x:Name="textBoxBuck1MaxOff" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="91,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.012,-4.159" KeyDown="textBoxBuck1MaxOff_KeyDown" LostFocus="textBoxBuck1MaxOff_LostFocus" MaxLength="3"/>
+                <Label x:Name="labelBuck1MaxOff" Content="Max Off" HorizontalAlignment="Left" Margin="48,191,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelBuck1MaxOffTimeDac1" Content="DAC" HorizontalAlignment="Left" Margin="138,215,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.618,0.141"/>
+                <Label Content="Most Recent" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockLED1MostRecentDAC" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,274,0,0" VerticalAlignment="Top" Width="27"/>
+                <Label Content="ADC" HorizontalAlignment="Left" Margin="123,269,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockLED1MostRecentVolts" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,296,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="27"/>
+                <Label Content="Volts" HorizontalAlignment="Left" Margin="123,291,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockBuck1PwmStatus" HorizontalAlignment="Left" TextAlignment="Center" Margin="92,430,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.355,4.438"/>
+                <Label Content="PWM" HorizontalAlignment="Left" Margin="48,425,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.111,-0.795"/>
+                <TextBlock x:Name="textBlockBuck1PeakA" HorizontalAlignment="Left" TextAlignment="Center" Margin="105,51,0,0" VerticalAlignment="Top" Width="28"/>
+                <Label x:Name="labelPeakThresholdAmps1" Content="" HorizontalAlignment="Left" Margin="138,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.296,-0.269" Width="39"/>
+                <Label x:Name="labelBuck1Rsense" Content="Rsense" HorizontalAlignment="Left" Margin="40,400,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.504,0.231"/>
+                <TextBox x:Name="textBoxBuck1Rsense" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="23" Margin="92,401,55,0" Text="TextBox" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.74,0.072"/>
+                <Label x:Name="labelBuck1RsenseOhms" Content="Ohms" HorizontalAlignment="Left" Margin="128,401,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.632,-0.731"/>
+                <TextBlock x:Name="textBlockBuck1OffTimeEst" HorizontalAlignment="Left" TextAlignment="Center" Margin="105,123,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="0.512,0.209"/>
+                <Label x:Name="labelBuck1OffTimeEstSecs" Content="" HorizontalAlignment="Left" Margin="137,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.296,-0.269" Width="39"/>
+                <TextBlock x:Name="textBlockBuck1MaxOffEst" HorizontalAlignment="Left" TextAlignment="Center" Margin="105,195,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="0.512,0.209"/>
+                <Label x:Name="labelBuck1MaxOffTimeEstSecs" Content="" HorizontalAlignment="Left" Margin="138,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.296,-0.269" Width="39"/>
+                <TextBlock x:Name="textBlockBuck1LastOn" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,317,0,0" Text="Tex" VerticalAlignment="Top" Width="27"/>
+                <Label Content="ADC" HorizontalAlignment="Left" Margin="123,313,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockBuck1LastOnVolts" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,338,0,0" Text="Tex" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="27"/>
+                <Label Content="Volts" HorizontalAlignment="Left" Margin="123,333,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="buttonBuck1LastOn" Content="Last On" HorizontalAlignment="Left" Margin="34,316,0,0" VerticalAlignment="Top" Width="52" Click="buttonBuck1LastOn_Click" IsEnabled="False" Visibility="Hidden"/>
+                <Button x:Name="buttonBuck1LastOff" Content="Last Off" HorizontalAlignment="Left" Margin="28,358,0,0" VerticalAlignment="Top" Width="58" Click="buttonBuck1LastOff_Click" IsEnabled="False" Visibility="Hidden"/>
+                <TextBlock x:Name="textBlockBuck1LastOff" HorizontalAlignment="Left" TextAlignment="Center" Margin="92,359,0,0" Text="Tex" VerticalAlignment="Top" Width="27"/>
+                <Label Content="ADC" HorizontalAlignment="Left" Margin="123,355,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockBuck1LastOffVolts" HorizontalAlignment="Left" TextAlignment="Center" Margin="92,380,0,0" Text="Tex" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="27"/>
+                <Label Content="Volts" HorizontalAlignment="Left" Margin="124,375,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelLastOn1" Content="Last On" HorizontalAlignment="Left" Margin="36,314,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelLastOff1" Content="Last Off" HorizontalAlignment="Left" Margin="35,356,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxChan2" Header="Channel 2" HorizontalAlignment="Left" Margin="447,10,0,10" Width="193">
+            <Grid Margin="1">
+                <CheckBox x:Name="checkBoxBuck2Enable" Content="Buck 2 Enable" Margin="49,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.317,1.273" Checked="checkBoxBuck2Enable_Checked" Unchecked="checkBoxBuck2Enable_Checked" HorizontalAlignment="Left" Width="95"/>
+                <Slider x:Name="sliderBuck2PeakV" SmallChange="1" HorizontalAlignment="Left" Margin="8,102,0,0" VerticalAlignment="Top" Width="161" Maximum="255" ValueChanged="sliderBuck2PeakV_ValueChanged"/>
+                <TextBox x:Name="textBoxBuck2PeakV" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="91,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" RenderTransformOrigin="1.012,-4.159" MaxLength="3" LostFocus="textBoxBuck2PeakV_LostFocus" KeyDown="textBoxBuck2PeakV_KeyDown"/>
+                <Label x:Name="labelBuck2PeakA" Content="Peak Threshold" HorizontalAlignment="Left" Margin="11,46,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelPeakThresholdDAC2" Content="DAC" HorizontalAlignment="Left" Margin="137,71,0,0" VerticalAlignment="Top"/>
+                <Slider x:Name="sliderBuck2OffTime" SmallChange="1" Margin="10,175,8,0" VerticalAlignment="Top" ValueChanged="sliderBuck2OffTime_ValueChanged" Maximum="255"/>
+                <TextBox x:Name="textBoxBuck2OffTime" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="91,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" RenderTransformOrigin="1.012,-4.159" KeyDown="textBoxBuck2OffTime_KeyDown" LostFocus="textBoxBuck1OffTime_LostFocus" MaxLength="3"/>
+                <Label x:Name="labelBuck2OffTime" Content="Off Time" HorizontalAlignment="Left" Margin="48,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.756,0.385"/>
+                <Label x:Name="labelBuck2OffTimeDAC1" Content="DAC" HorizontalAlignment="Left" Margin="137,144,0,0" VerticalAlignment="Top"/>
+                <Slider x:Name="sliderBuck2MaxOff" SmallChange="1" HorizontalAlignment="Left" Margin="11,249,0,0" VerticalAlignment="Top" Width="158" ValueChanged="sliderBuck2MaxOff_ValueChanged" Maximum="255"/>
+                <TextBox x:Name="textBoxBuck2MaxOff" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="91,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" RenderTransformOrigin="1.012,-4.159" KeyDown="textBoxBuck2MaxOff_KeyDown" LostFocus="textBoxBuck2MaxOff_LostFocus" MaxLength="3"/>
+                <Label x:Name="labelBuck2MaxOff" Content="Max Off" HorizontalAlignment="Left" Margin="48,193,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelBuck1MaxOffTimeDac2" Content="DAC" HorizontalAlignment="Left" Margin="139,218,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.49,0"/>
+                <Label Content="Most Recent" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockLED2MostRecentDAC" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,272,0,0" VerticalAlignment="Top" Width="27"/>
+                <TextBlock x:Name="textBlockLED2MostRecentVolts" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,293,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="27"/>
+                <Label Content="ADC" HorizontalAlignment="Left" Margin="123,267,0,0" VerticalAlignment="Top"/>
+                <Label Content="Volts" HorizontalAlignment="Left" Margin="123,291,0,0" VerticalAlignment="Top"/>
+                <Label Content="PWM" HorizontalAlignment="Left" Margin="48,427,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.111,-0.795"/>
+                <TextBlock x:Name="textBlockBuck2PwmStatus" HorizontalAlignment="Left" TextAlignment="Center" Margin="92,431,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.355,4.438"/>
+                <Label x:Name="labelBuck2Rsense" Content="Rsense" HorizontalAlignment="Left" Margin="40,401,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBoxBuck2Rsense" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="23" Margin="92,401,55,0" Text="TextBox" VerticalAlignment="Top" Width="32"/>
+                <Label x:Name="labelBuck2RsenseOhms" Content="Ohms" HorizontalAlignment="Left" Margin="129,400,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.632,-0.731"/>
+                <TextBlock x:Name="textBoxBuck2PeakA" HorizontalAlignment="Left" TextAlignment="Center" Margin="106,51,0,0" VerticalAlignment="Top" Width="28"/>
+                <Label x:Name="labelPeakThresholdAmps2" Content="" HorizontalAlignment="Left" Margin="137,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.296,-0.269" Width="39"/>
+                <TextBlock x:Name="textBlockBuck2OffTimeEst" HorizontalAlignment="Left" TextAlignment="Center" Margin="106,125,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="0.929,0.458"/>
+                <Label x:Name="labelBuck2OffTimeEstSecs" Content="" HorizontalAlignment="Left" Margin="139,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.296,-0.269" Width="39"/>
+                <TextBlock x:Name="textBlockBuck2MaxOffEst" HorizontalAlignment="Left" TextAlignment="Center" Margin="105,198,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.512,0.209"/>
+                <Label x:Name="labelBuck2MaxOffTimeEstSecs" Content="" HorizontalAlignment="Left" Margin="137,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.296,-0.269" Width="39"/>
+                <Button x:Name="buttonBuck2LastOn" Content="Last On" HorizontalAlignment="Left" Margin="34,316,0,0" VerticalAlignment="Top" Width="52" Click="buttonBuck2LastOn_Click" IsEnabled="False" Visibility="Hidden"/>
+                <TextBlock x:Name="textBlockBuck2LastOn" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,317,0,0" Text="Tex" VerticalAlignment="Top" Width="27"/>
+                <Label Content="ADC" HorizontalAlignment="Left" Margin="123,313,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockBuck2LastOnVolts" HorizontalAlignment="Left" TextAlignment="Center" Margin="91,338,0,0" Text="Tex" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="27"/>
+                <Label Content="Volts" HorizontalAlignment="Left" Margin="123,333,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="buttonBuck2LastOff" Content="Last Off" HorizontalAlignment="Left" Margin="28,358,0,0" VerticalAlignment="Top" Width="58" Click="buttonBuck2LastOff_Click" IsEnabled="False" Visibility="Hidden"/>
+                <TextBlock x:Name="textBlockBuck2LastOff" HorizontalAlignment="Left" TextAlignment="Center" Margin="92,359,0,0" Text="Tex" VerticalAlignment="Top" Width="27"/>
+                <Label Content="ADC" HorizontalAlignment="Left" Margin="123,355,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockBuck2LastOffVolts" HorizontalAlignment="Left" TextAlignment="Center" Margin="92,380,0,0" Text="Tex" VerticalAlignment="Top" RenderTransformOrigin="0.061,0.312" Width="27"/>
+                <Label Content="Volts" HorizontalAlignment="Left" Margin="124,375,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelLastOn2" Content="Last On" HorizontalAlignment="Left" Margin="36,314,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelLastOff2" Content="Last Off" HorizontalAlignment="Left" Margin="35,356,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxTemp" Header="Temp" HorizontalAlignment="Left" Height="119" Margin="208,10,0,0" VerticalAlignment="Top" Width="234">
+            <Grid Margin="0,0,2,2">
+                <TextBlock x:Name="textBoxVthermDAC" VerticalAlignment="Top" TextAlignment="Center" Margin="124,33,0,0" RenderTransformOrigin="-0.122,0.396" HorizontalAlignment="Left" Width="30"/>
+                <TextBlock x:Name="textBoxVthermTemp" TextAlignment="Center" HorizontalAlignment="Left" Margin="124,8,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.478,1.441"/>
+                <Label x:Name="labelVtherm" Content="Degrees C :" HorizontalAlignment="Left" Margin="49,3,0,0" VerticalAlignment="Top" Width="70"/>
+                <Label x:Name="labelVthermDac" Content="DAC :" HorizontalAlignment="Left" Margin="80,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.838,-0.718" Width="40"/>
+                <Button x:Name="buttonVthermUpdate" Content="Update" Margin="79,65,79,0" VerticalAlignment="Top" Click="buttonVthermUpdate_Click" IsEnabled="False" Visibility="Hidden"/>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="labelValuesApprox_" Content="*Approximate" Margin="287,474,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83"/>
+        <GroupBox x:Name="groupBoxStatus" Header="Status" HorizontalAlignment="Left" Height="223" Margin="208,134,0,0" VerticalAlignment="Top" Width="234">
+            <Grid Margin="1">
+                <TextBlock x:Name="textBlockStatusReg" HorizontalAlignment="Left" TextAlignment="Center" Margin="119,10,0,0" Text="TextBlock" VerticalAlignment="Top" Width="27" RenderTransformOrigin="1.274,0.585"/>
+                <TextBlock x:Name="textBlockSpiError" Margin="40,50,164,0" TextAlignment="Center" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.81,1.128" Width="16" Height="16"/>
+                <Button x:Name="buttonAllButtsUpdate" Content="Update All Buttons" Margin="55,167,55,0" VerticalAlignment="Top" RenderTransformOrigin="0.164,0.617" Click="buttonAllButtsUpdate_Click" IsEnabled="False" Visibility="Hidden"/>
+                <Button x:Name="buttonStatus" Content="Status" HorizontalAlignment="Left" Margin="67,9,0,0" VerticalAlignment="Top" Width="47" Click="buttonStatus_Click"/>
+                <Label x:Name="labelSpiError" Content="SPI_ERROR" HorizontalAlignment="Left" Margin="61,45,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockThermWarning" Margin="40,71,164,0" TextAlignment="Center" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.81,1.128" Width="16" Height="16"/>
+                <TextBlock x:Name="textBlockLed1" Margin="40,92,164,0" TextAlignment="Center" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.81,1.128" Width="16" Height="16"/>
+                <TextBlock x:Name="textBlockLed2" Margin="40,113,164,0" TextAlignment="Center" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.81,1.128" Width="16" Height="16"/>
+                <TextBlock x:Name="textBlockPowerCycled" Margin="40,134,164,0" TextAlignment="Center" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.81,1.128" Width="16" Height="16"/>
+                <Label x:Name="labelTherm" Content="THERMAL_WARNING" HorizontalAlignment="Left" Margin="61,66,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelLed1" Content="LED1_BOOTUV_ERROR" HorizontalAlignment="Left" Margin="61,87,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelLed2" Content="LED2_BOOTUV_ERROR" HorizontalAlignment="Left" Margin="61,108,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="labelPowerCycle" Content="POWER_CYCLED" HorizontalAlignment="Left" Margin="61,129,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="buttonUpdateAllDevice" Content="Update On" Margin="294,401,294,0" VerticalAlignment="Top" Click="buttonUpdateAllDevice_Click"/>
+    </Grid>
+</UserControl>

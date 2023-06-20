@@ -1,0 +1,34 @@
+﻿<Window x:Name="evmSetup" x:Class="TPS9266xEvaluationModule.SetupOptionsWindow0"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPS9266xEvaluationModule"
+        mc:Ignorable="d"
+        Title="EVM Selection and Setup" Height="277.612" Width="378.395" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid x:Name="gridEVMSetup">
+        <CheckBox x:Name="checkBoxShowSetup" Content="Do not show setup on next startup" HorizontalAlignment="Left" Margin="10,216,0,0" Checked="checkBoxShowSetup_Checked" Height="16" VerticalAlignment="Top"/>
+        <GroupBox x:Name="groupBoxAddressSetup" Header="Device Address Setup" HorizontalAlignment="Left" Height="92" Margin="6,110,0,0" VerticalAlignment="Top" Width="350">
+            <Grid x:Name="gridAddressSetup" Margin="0">
+                <ComboBox x:Name="comboBoxDevice" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="52" SelectionChanged="comboBoxDevice_SelectionChanged"/>
+                <Label x:Name="labelDevice" Content="Device Type" HorizontalAlignment="Left" Margin="72,6,0,0" Height="26" VerticalAlignment="Top" RenderTransformOrigin="0.491,-0.84"/>
+                <Label x:Name="labelAddress" Content="Desired Address" HorizontalAlignment="Left" Margin="60,34,0,0" Height="26" VerticalAlignment="Top"/>
+                <ComboBox x:Name="comboBoxAddress" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="43" SelectionChanged="comboBoxAddress_SelectionChanged"/>
+                <Button x:Name="buttonAddDevice" Content="Add Device" Margin="206,15,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="84" Click="buttonAddDevice_Click"/>
+                <Label x:Name="labelDeviceAdded" Content="Device added at address X" HorizontalAlignment="Left" Margin="180,38,0,0" Height="26" VerticalAlignment="Top" RenderTransformOrigin="0.491,-0.84" Width="155"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxEVM" Header="EVM Selection" HorizontalAlignment="Left" Height="95" Margin="6,10,0,0" VerticalAlignment="Top" Width="350">
+            <Grid x:Name="gridEVM" Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="9*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="comboBoxEVM" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="219" Grid.ColumnSpan="2" SelectionChanged="comboBoxEVM_SelectionChanged"/>
+                <Label x:Name="labelEVM" Content="Select your EVM" HorizontalAlignment="Left" Margin="200,8,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label x:Name="labelNumberDevices" Content="Number of Devices" Margin="17,34,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="111" Grid.Column="1"/>
+                <ComboBox x:Name="comboBoxNumDevices" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" Margin="10,37,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="36" Grid.ColumnSpan="2" SelectionChanged="comboBoxNumDevices_SelectionChanged" DropDownClosed="comboBoxNumDevices_DropDownClosed"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

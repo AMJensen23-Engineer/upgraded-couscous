@@ -1,0 +1,19 @@
+﻿<Window x:Class="TPS9266xEvaluationModule.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPS9266xEvaluationModule"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing"
+        Title="SplashScreen" Height="369.318" Width="556.522" ResizeMode="NoResize">
+    <Grid x:Name="gridSplashScreen" Margin="0,0,-36,-24">
+        <Grid.Background>
+            <ImageBrush ImageSource="SplashScreen682.png"/>
+        </Grid.Background>
+        <Label Content="Copyright 2019. Texas Instruments Incorporated. All rights reserved." HorizontalAlignment="Left" Margin="317,363,0,0" VerticalAlignment="Top" Foreground="#FFFBF9F9" FontSize="8"/>
+    </Grid>
+</Window>

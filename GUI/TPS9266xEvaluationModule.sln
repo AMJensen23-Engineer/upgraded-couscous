@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS9266xEvaluationModule", "LED_Controller_GUI_LP\TPS9266xEvaluationModule.csproj", "{848F456C-400D-476F-96C5-10E5A5DEE05C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{45795053-903B-41BF-8D34-81BAE8237EAA} = {45795053-903B-41BF-8D34-81BAE8237EAA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "acctrl", "..\AcCtrl\software\acctrl\acctrl.vcxproj", "{45795053-903B-41BF-8D34-81BAE8237EAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Debug|x64.Build.0 = Debug|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Debug|x86.Build.0 = Debug|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Release|x64.ActiveCfg = Release|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Release|x64.Build.0 = Release|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Release|x86.ActiveCfg = Release|Any CPU
+		{848F456C-400D-476F-96C5-10E5A5DEE05C}.Release|x86.Build.0 = Release|Any CPU
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Debug|x64.ActiveCfg = Debug|Win32
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Debug|x86.ActiveCfg = Debug|Win32
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Debug|x86.Build.0 = Debug|Win32
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Release|Any CPU.ActiveCfg = Release|Win32
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Release|x64.ActiveCfg = Release|x64
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Release|x64.Build.0 = Release|x64
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Release|x86.ActiveCfg = Release|Win32
+		{45795053-903B-41BF-8D34-81BAE8237EAA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38BD16B4-4E16-4301-91EF-367FC6331A6F}
+	EndGlobalSection
+EndGlobal

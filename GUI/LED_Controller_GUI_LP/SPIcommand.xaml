@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TPS9266xEvaluationModule.SPIcommand"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TPS9266xEvaluationModule"
+             mc:Ignorable="d" Width="269.632" Height="417.164">
+    <Grid x:Name="gridSPIcommand" Margin="0">
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <CheckBox x:Name="checkBoxWrite" Content="Write" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="49" Checked="checkBoxWrite_Checked" Unchecked="checkBoxWrite_Checked" Margin="22,77,0,0"/>
+        <TextBox x:Name="textBoxRegAddress" HorizontalAlignment="Left" Height="23" Margin="118,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.37,0.391" KeyDown="textBoxRegAddress_KeyDown" LostFocus="textBoxRegAddress_LostFocus"/>
+        <Label x:Name="labelRegAddress" Content="Register Address:" HorizontalAlignment="Left" Margin="12,97,0,0" VerticalAlignment="Top" Height="26" Width="101" RenderTransformOrigin="0.693,0.538"/>
+        <Label x:Name="LabelWriteData" Content="Write Data:" HorizontalAlignment="Left" Margin="44,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.12,0.164" Height="26" Width="69"/>
+        <TextBox x:Name="textBoxWriteData" HorizontalAlignment="Left" Height="23" Margin="118,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyDown="textBoxWriteData_KeyDown" LostFocus="textBoxWriteData_LostFocus"/>
+        <Label x:Name="labelReturnedData" Content="Data Read:" HorizontalAlignment="Left" Margin="46,151,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
+        <TextBox x:Name="textBoxDataRead" HorizontalAlignment="Left" Height="23" Margin="118,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <GroupBox x:Name="groupBoxSPIcommand" Header="SPI Status" HorizontalAlignment="Left" Height="225" VerticalAlignment="Top" Width="270" Margin="0,175,0,0">
+            <TextBox x:Name="textBoxSPIstatus" IsReadOnly="true" TextWrapping="Wrap" Text="Status" Margin="1" VerticalScrollBarVisibility="Auto"/>
+        </GroupBox>
+        <Button x:Name="buttonSendCommand" Content="Send" HorizontalAlignment="Left" Margin="183,96,0,0" VerticalAlignment="Top" Width="73" Click="buttonSendCommand_Click" RenderTransformOrigin="0.159,0.35"/>
+        <Label x:Name="labelSPIFreq" Content="SPI Freq (kHz):" HorizontalAlignment="Left" Margin="12,408,0,-17" VerticalAlignment="Top"/>
+        <Button x:Name="buttonStatus" Content="Clear Status" HorizontalAlignment="Left" Margin="183,120,0,0" VerticalAlignment="Top" Width="73" Click="buttonStatus_Click"/>
+        <GroupBox x:Name="groupBoxDevice" Header="Device" HorizontalAlignment="Left" Height="68" Margin="22,4,0,0" VerticalAlignment="Top" Width="64">
+            <StackPanel HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="45" Margin="4,2,0,-2">
+                <RadioButton x:Name="radioButton518" Content="518" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButton518_Checked"/>
+                <RadioButton x:Name="radioButton520" Content="520" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButton520_Checked"/>
+                <RadioButton x:Name="radioButton682" Content="682" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButton682_Checked"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxComms" Header="Comm Type" HorizontalAlignment="Left" Height="68" Margin="91,4,0,0" VerticalAlignment="Top" Width="87">
+            <StackPanel HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="61" Margin="0,2,0,-9">
+                <RadioButton x:Name="radioButtonSingle" Content="Single" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButtonSingle_Checked"/>
+                <RadioButton x:Name="radioButtonStar" Content="Star" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButtonStar_Checked"/>
+                <RadioButton x:Name="radioButtonDaisy" Content="Daisy" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="radioButtonDaisy_Checked" IsEnabled="False"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxAddress" Header="Address" HorizontalAlignment="Left" Height="68" Margin="183,4,0,0" VerticalAlignment="Top" Width="70">
+            <ComboBox x:Name="comboBoxAddress" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" RenderTransformOrigin="-0.763,1.182" IsReadOnly="True" Margin="10,6,0,0" SelectedIndex="0" SelectionChanged="comboBoxAddress_SelectionChanged"/>
+        </GroupBox>
+        <Label x:Name="labelPrefixInfo" Content="Prefix &quot;0x&quot; for Hex Input Values" HorizontalAlignment="Left" Margin="85,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.044,0.59"/>
+    </Grid>
+</UserControl>

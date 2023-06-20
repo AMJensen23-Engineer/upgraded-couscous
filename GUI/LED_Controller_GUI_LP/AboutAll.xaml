@@ -1,0 +1,42 @@
+﻿<Window x:Class="TPS9266xEvaluationModule.AboutAll"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPS9266xEvaluationModule"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="About" Height="301.537" Width="700.221" ResizeMode="NoResize">
+    <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,-39,-30">
+        <Grid x:Name="gridAboutBox" Margin="0,0,42,27">
+            <Grid.Background>
+                <ImageBrush ImageSource="TPS9266xEvaluationModuleAbout.png" Stretch="Uniform" AlignmentX="Left">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
+            <StackPanel x:Name="atackPanelAboutInfo" Margin="364,5,0,35" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="322">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.257"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.334"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <Label x:Name="labelProductName" Content="Label"/>
+                <Label x:Name="labelRevs" Content="Label"/>
+                <Label x:Name="labelCopyright" Content="Label"/>
+                <Label x:Name="labelCompanyName" Content="Label"/>
+                <TextBox x:Name="textBoxDescription" Height="100" TextWrapping="Wrap" Text="TextBox" Margin="3,3,22,3"/>
+            </StackPanel>
+            <Button x:Name="buttonOK" Content="_OK" HorizontalAlignment="Left" Margin="594,227,0,0" VerticalAlignment="Top" Width="54" Click="buttonOK_Click" RenderTransformOrigin="2.954,0.511"/>
+        </Grid>
+    </Border>
+</Window>
